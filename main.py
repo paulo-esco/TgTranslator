@@ -44,7 +44,7 @@ dp = Dispatcher()
 
 bot = Bot(
     TOKEN or input(
-        "Введите токен бота(чтобы не вводить каждый раз, впишите его меж кавычек в 4 строке): "
+        "Введите токен бота(чтобы не вводить каждый раз, впишите его меж кавычек в 41 строке): "
     ),
     default=DefaultBotProperties(
         link_preview_is_disabled=True,
