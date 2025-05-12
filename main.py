@@ -24,15 +24,19 @@ except ImportError:          # сработает, если чего-то не �
         [sys.executable, "-m", "pip", "install", "--upgrade", *THIRD_PARTY]
     )
     # пробуем ещё раз
-    from aiogram import Bot, Dispatcher, types
-    from aiogram.client.default import DefaultBotProperties
-    from aiogram.filters import CommandStart
-    from aiogram.types import (
-        BotCommand,
-        InlineQueryResultArticle,
-        InputTextMessageContent,
-    )
-    from googletrans import Translator
+    try:
+        from aiogram import Bot, Dispatcher, types
+        from aiogram.client.default import DefaultBotProperties
+        from aiogram.filters import CommandStart
+        from aiogram.types import (
+            BotCommand,
+            InlineQueryResultArticle,
+            InputTextMessageContent,
+        )
+        from googletrans import Translator
+    except ImportError:
+        print("Библиотеки подгружены. Перезапустите бота командой: python main.py")
+        exit()
 
 TOKEN = ''
 
