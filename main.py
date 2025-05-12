@@ -3,16 +3,19 @@ import os
 import asyncio
 from uuid import uuid4
 
-from aiogram.client.default import DefaultBotProperties
-from aiogram.filters import CommandStart
-from aiogram.types import BotCommand, InlineQueryResultArticle, InputTextMessageContent
-
 try:
     from googletrans import Translator
     from aiogram import Dispatcher, Bot, types, F
+    from aiogram.client.default import DefaultBotProperties
+    from aiogram.filters import CommandStart
+    from aiogram.types import BotCommand, InlineQueryResultArticle, InputTextMessageContent
 except ModuleNotFoundError:
     os.system("pip install aiogram googletrans")
-    from aiogram import Dispatcher, Bot
+    from googletrans import Translator
+    from aiogram import Dispatcher, Bot, types, F
+    from aiogram.client.default import DefaultBotProperties
+    from aiogram.filters import CommandStart
+    from aiogram.types import BotCommand, InlineQueryResultArticle, InputTextMessageContent
 
 TOKEN = ''
 
