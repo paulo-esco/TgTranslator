@@ -1,21 +1,38 @@
 import logging
-import os
 import asyncio
+import subprocess
+import sys
 from uuid import uuid4
 
+
+THIRD_PARTY = ("aiogram>=3.5,<4.0", "googletrans==4.0.0-rc1")
+
 try:
-    from googletrans import Translator
-    from aiogram import Dispatcher, Bot, types, F
+    # пробуем импортировать – если не выйдет, установим
+    from aiogram import Bot, Dispatcher, types
     from aiogram.client.default import DefaultBotProperties
     from aiogram.filters import CommandStart
-    from aiogram.types import BotCommand, InlineQueryResultArticle, InputTextMessageContent
-except ModuleNotFoundError:
-    os.system("pip install aiogram googletrans")
+    from aiogram.types import (
+        BotCommand,
+        InlineQueryResultArticle,
+        InputTextMessageContent,
+    )
     from googletrans import Translator
-    from aiogram import Dispatcher, Bot, types, F
+except ImportError:          # сработает, если чего-то не хватает
+    print("🔧 Устанавливаю/обновляю зависимости… (может занять около минуты)")
+    subprocess.check_call(
+        [sys.executable, "-m", "pip", "install", "--upgrade", *THIRD_PARTY]
+    )
+    # пробуем ещё раз
+    from aiogram import Bot, Dispatcher, types
     from aiogram.client.default import DefaultBotProperties
     from aiogram.filters import CommandStart
-    from aiogram.types import BotCommand, InlineQueryResultArticle, InputTextMessageContent
+    from aiogram.types import (
+        BotCommand,
+        InlineQueryResultArticle,
+        InputTextMessageContent,
+    )
+    from googletrans import Translator
 
 TOKEN = ''
 
