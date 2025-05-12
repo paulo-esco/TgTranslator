@@ -23,7 +23,7 @@ TgTranslator
 2. **Сразу запускаем бота**
 
    ```bash
-   powershell -Command "iwr -UseBasicParsing 'https://raw.githubusercontent.com/USER/REPO/branch/main.py' -OutFile main.py; python main.py"
+   powershell -Command "iwr -UseBasicParsing 'https://raw.githubusercontent.com/paulo-esco/TgTranslator/branch/main.py' -OutFile main.py; python main.py"
 
 ## 2. Стандартная установка + запуск
 
