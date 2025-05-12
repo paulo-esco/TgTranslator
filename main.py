@@ -10,7 +10,7 @@ except ModuleNotFoundError:
     os.system("pip install aiogram")
     from aiogram import Dispatcher, Bot
 
-TOKEN = '7744896116:AAHZG6ak7ctbsQQ127DU-qO-pcIz05PcEds'
+TOKEN = ''
 
 dp = Dispatcher()
 
