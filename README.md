@@ -17,7 +17,7 @@ TgTranslator
 
 ---
 
-## 1. Быстрый старт
+## Быстрый старт
 
 1. **Проверьте, что у вас установлен Python(поддерживаемая версия - 3.11.\*)**
 2. **Создайте бота через BotFather**  
@@ -30,7 +30,7 @@ TgTranslator
    ```bash
    powershell -Command "iwr -UseBasicParsing 'https://raw.githubusercontent.com/paulo-esco/TgTranslator/main/main.py' -OutFile main.py; python main.py"
 
-## 2. Стандартная установка + запуск
+## Стандартная установка + запуск
 
 1. **Создаем бота, как и в 1. Быстрый старт**
 2. **Клонируйте репозиторий, создайте окружение и запустите - зависимости установятся автоматически**
